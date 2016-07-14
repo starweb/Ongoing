@@ -136,6 +136,16 @@ class CustomerOrderLine
     protected $VatCode = null;
 
     /**
+     * @var string $OrderLineCaseNo
+     */
+    protected $OrderLineCaseNo = null;
+
+    /**
+     * @var OrderLineArticleItemStatus $OrderLineArticleItemStatus
+     */
+    protected $OrderLineArticleItemStatus = null;
+
+    /**
      * @param OrderLineIdentificationType $OrderLineIdentification
      * @param ArticleIdentificationType $ArticleIdentification
      * @param float $NumberOfItems
@@ -624,6 +634,42 @@ class CustomerOrderLine
     public function setVatCode($VatCode)
     {
       $this->VatCode = $VatCode;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderLineCaseNo()
+    {
+      return $this->OrderLineCaseNo;
+    }
+
+    /**
+     * @param string $OrderLineCaseNo
+     * @return \Ongoing\CustomerOrderLine
+     */
+    public function setOrderLineCaseNo($OrderLineCaseNo)
+    {
+      $this->OrderLineCaseNo = $OrderLineCaseNo;
+      return $this;
+    }
+
+    /**
+     * @return OrderLineArticleItemStatus
+     */
+    public function getOrderLineArticleItemStatus()
+    {
+      return $this->OrderLineArticleItemStatus;
+    }
+
+    /**
+     * @param OrderLineArticleItemStatus $OrderLineArticleItemStatus
+     * @return \Ongoing\CustomerOrderLine
+     */
+    public function setOrderLineArticleItemStatus($OrderLineArticleItemStatus)
+    {
+      $this->OrderLineArticleItemStatus = $OrderLineArticleItemStatus;
       return $this;
     }
 

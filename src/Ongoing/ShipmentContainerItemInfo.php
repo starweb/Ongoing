@@ -126,15 +126,22 @@ class ShipmentContainerItemInfo
     protected $PalletItemOwnerCode = null;
 
     /**
+     * @var int $PalletItemId
+     */
+    protected $PalletItemId = null;
+
+    /**
      * @param boolean $IsConsolidated
      * @param float $NumberOfItems
      * @param int $ShipmentId
+     * @param int $PalletItemId
      */
-    public function __construct($IsConsolidated, $NumberOfItems, $ShipmentId)
+    public function __construct($IsConsolidated, $NumberOfItems, $ShipmentId, $PalletItemId)
     {
       $this->IsConsolidated = $IsConsolidated;
       $this->NumberOfItems = $NumberOfItems;
       $this->ShipmentId = $ShipmentId;
+      $this->PalletItemId = $PalletItemId;
     }
 
     /**
@@ -566,6 +573,24 @@ class ShipmentContainerItemInfo
     public function setPalletItemOwnerCode($PalletItemOwnerCode)
     {
       $this->PalletItemOwnerCode = $PalletItemOwnerCode;
+      return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPalletItemId()
+    {
+      return $this->PalletItemId;
+    }
+
+    /**
+     * @param int $PalletItemId
+     * @return \Ongoing\ShipmentContainerItemInfo
+     */
+    public function setPalletItemId($PalletItemId)
+    {
+      $this->PalletItemId = $PalletItemId;
       return $this;
     }
 

@@ -91,13 +91,25 @@ class ReceivedArticlItem
     protected $Comment = null;
 
     /**
+     * @var int $OriginalArticleItemId
+     */
+    protected $OriginalArticleItemId = null;
+
+    /**
+     * @var ArticleItemClassInfo[] $ArticleItemClass
+     */
+    protected $ArticleItemClass = null;
+
+    /**
      * @param \DateTime $InDate
      * @param float $NumberOfItems
+     * @param int $OriginalArticleItemId
      */
-    public function __construct(\DateTime $InDate, $NumberOfItems)
+    public function __construct(\DateTime $InDate, $NumberOfItems, $OriginalArticleItemId)
     {
       $this->InDate = $InDate->format(\DateTime::ATOM);
       $this->NumberOfItems = $NumberOfItems;
+      $this->OriginalArticleItemId = $OriginalArticleItemId;
     }
 
     /**
@@ -423,6 +435,42 @@ class ReceivedArticlItem
     public function setComment($Comment)
     {
       $this->Comment = $Comment;
+      return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOriginalArticleItemId()
+    {
+      return $this->OriginalArticleItemId;
+    }
+
+    /**
+     * @param int $OriginalArticleItemId
+     * @return \Ongoing\ReceivedArticlItem
+     */
+    public function setOriginalArticleItemId($OriginalArticleItemId)
+    {
+      $this->OriginalArticleItemId = $OriginalArticleItemId;
+      return $this;
+    }
+
+    /**
+     * @return ArticleItemClassInfo[]
+     */
+    public function getArticleItemClass()
+    {
+      return $this->ArticleItemClass;
+    }
+
+    /**
+     * @param ArticleItemClassInfo[] $ArticleItemClass
+     * @return \Ongoing\ReceivedArticlItem
+     */
+    public function setArticleItemClass(array $ArticleItemClass = null)
+    {
+      $this->ArticleItemClass = $ArticleItemClass;
       return $this;
     }
 

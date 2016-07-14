@@ -97,6 +97,7 @@ class Service extends \SoapClient
       'ReceivedInOrderLine' => 'Ongoing\\ReceivedInOrderLine',
       'ArrayOfReceivedArticlItem' => 'Ongoing\\ArrayOfReceivedArticlItem',
       'ReceivedArticlItem' => 'Ongoing\\ReceivedArticlItem',
+      'ArticleItemClassInfo' => 'Ongoing\\ArticleItemClassInfo',
       'GetOrderByOrderNumber' => 'Ongoing\\GetOrderByOrderNumber',
       'GetOrderByOrderNumberResponse' => 'Ongoing\\GetOrderByOrderNumberResponse',
       'GetOrderStatusReports' => 'Ongoing\\GetOrderStatusReports',
@@ -108,6 +109,7 @@ class Service extends \SoapClient
       'GetOrdersByQuery' => 'Ongoing\\GetOrdersByQuery',
       'OrderFilters' => 'Ongoing\\OrderFilters',
       'ArrayOfInt' => 'Ongoing\\ArrayOfInt',
+      'OrderSpecialFilters' => 'Ongoing\\OrderSpecialFilters',
       'GetOrdersByQueryResponse' => 'Ongoing\\GetOrdersByQueryResponse',
       'GetOrdersResult' => 'Ongoing\\GetOrdersResult',
       'ArrayOfOrder' => 'Ongoing\\ArrayOfOrder',
@@ -225,6 +227,7 @@ class Service extends \SoapClient
       'ArrayOfSubOrderLine' => 'Ongoing\\ArrayOfSubOrderLine',
       'SubOrderLine' => 'Ongoing\\SubOrderLine',
       'VatCodeClass' => 'Ongoing\\VatCodeClass',
+      'OrderLineArticleItemStatus' => 'Ongoing\\OrderLineArticleItemStatus',
       'ArrayOfCustomerOrderTextLine' => 'Ongoing\\ArrayOfCustomerOrderTextLine',
       'CustomerOrderTextLine' => 'Ongoing\\CustomerOrderTextLine',
       'ProcessOrderResponse' => 'Ongoing\\ProcessOrderResponse',
@@ -310,6 +313,35 @@ class Service extends \SoapClient
       'UploadOrderFile' => 'Ongoing\\UploadOrderFile',
       'OrderFile' => 'Ongoing\\OrderFile',
       'UploadOrderFileResponse' => 'Ongoing\\UploadOrderFileResponse',
+      'GetOrderStatuses' => 'Ongoing\\GetOrderStatuses',
+      'GetOrderStatusesResponse' => 'Ongoing\\GetOrderStatusesResponse',
+      'GetOrderStatusesResult' => 'Ongoing\\GetOrderStatusesResult',
+      'ArrayOfOrderStatus' => 'Ongoing\\ArrayOfOrderStatus',
+      'OrderStatus' => 'Ongoing\\OrderStatus',
+      'GetInOrderStatuses' => 'Ongoing\\GetInOrderStatuses',
+      'GetInOrderStatusesResponse' => 'Ongoing\\GetInOrderStatusesResponse',
+      'GetInOrderStatusesResult' => 'Ongoing\\GetInOrderStatusesResult',
+      'ArrayOfInOrderStatus' => 'Ongoing\\ArrayOfInOrderStatus',
+      'InOrderStatus' => 'Ongoing\\InOrderStatus',
+      'GetTransporterContracts' => 'Ongoing\\GetTransporterContracts',
+      'GetTransporterContractsResponse' => 'Ongoing\\GetTransporterContractsResponse',
+      'GetTransporterContractsResult' => 'Ongoing\\GetTransporterContractsResult',
+      'ArrayOfTransporterContract' => 'Ongoing\\ArrayOfTransporterContract',
+      'TransporterContract' => 'Ongoing\\TransporterContract',
+      'ArrayOfTransporterService' => 'Ongoing\\ArrayOfTransporterService',
+      'TransporterService' => 'Ongoing\\TransporterService',
+      'GetWarehouseTransferOrderByQuery' => 'Ongoing\\GetWarehouseTransferOrderByQuery',
+      'WarehouseTransferOrderFilters' => 'Ongoing\\WarehouseTransferOrderFilters',
+      'GetWarehouseTransferOrderByQueryResponse' => 'Ongoing\\GetWarehouseTransferOrderByQueryResponse',
+      'GetWarehouseTransferOrdersResult' => 'Ongoing\\GetWarehouseTransferOrdersResult',
+      'ArrayOfWarehouseTransferOrderInfo' => 'Ongoing\\ArrayOfWarehouseTransferOrderInfo',
+      'WarehouseTransferOrderInfo' => 'Ongoing\\WarehouseTransferOrderInfo',
+      'WarehouseTransferOrderInfoHeader' => 'Ongoing\\WarehouseTransferOrderInfoHeader',
+      'ArrayOfWarehouseTransferOrderLineInfo' => 'Ongoing\\ArrayOfWarehouseTransferOrderLineInfo',
+      'WarehouseTransferOrderLineInfo' => 'Ongoing\\WarehouseTransferOrderLineInfo',
+      'WarehouseTransferOrderLineArticleInfo' => 'Ongoing\\WarehouseTransferOrderLineArticleInfo',
+      'ArrayOfTransferArticleItemInfo' => 'Ongoing\\ArrayOfTransferArticleItemInfo',
+      'TransferArticleItemInfo' => 'Ongoing\\TransferArticleItemInfo',
     );
 
     /**
@@ -678,6 +710,42 @@ class Service extends \SoapClient
     public function UploadOrderFile(UploadOrderFile $parameters)
     {
       return $this->__soapCall('UploadOrderFile', array($parameters));
+    }
+
+    /**
+     * @param GetOrderStatuses $parameters
+     * @return GetOrderStatusesResponse
+     */
+    public function GetOrderStatuses(GetOrderStatuses $parameters)
+    {
+      return $this->__soapCall('GetOrderStatuses', array($parameters));
+    }
+
+    /**
+     * @param GetInOrderStatuses $parameters
+     * @return GetInOrderStatusesResponse
+     */
+    public function GetInOrderStatuses(GetInOrderStatuses $parameters)
+    {
+      return $this->__soapCall('GetInOrderStatuses', array($parameters));
+    }
+
+    /**
+     * @param GetTransporterContracts $parameters
+     * @return GetTransporterContractsResponse
+     */
+    public function GetTransporterContracts(GetTransporterContracts $parameters)
+    {
+      return $this->__soapCall('GetTransporterContracts', array($parameters));
+    }
+
+    /**
+     * @param GetWarehouseTransferOrderByQuery $parameters
+     * @return GetWarehouseTransferOrderByQueryResponse
+     */
+    public function GetWarehouseTransferOrderByQuery(GetWarehouseTransferOrderByQuery $parameters)
+    {
+      return $this->__soapCall('GetWarehouseTransferOrderByQuery', array($parameters));
     }
 
 }

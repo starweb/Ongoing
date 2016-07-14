@@ -71,6 +71,16 @@ class GoodsOwnerInfo
     protected $GoodsLocationCode = null;
 
     /**
+     * @var string $OrganizationNumber
+     */
+    protected $OrganizationNumber = null;
+
+    /**
+     * @var string $OrganizationVATNumber
+     */
+    protected $OrganizationVATNumber = null;
+
+    /**
      * @param int $Id
      * @param int $CountryId
      */
@@ -311,6 +321,42 @@ class GoodsOwnerInfo
     public function setGoodsLocationCode($GoodsLocationCode)
     {
       $this->GoodsLocationCode = $GoodsLocationCode;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrganizationNumber()
+    {
+      return $this->OrganizationNumber;
+    }
+
+    /**
+     * @param string $OrganizationNumber
+     * @return \Ongoing\GoodsOwnerInfo
+     */
+    public function setOrganizationNumber($OrganizationNumber)
+    {
+      $this->OrganizationNumber = $OrganizationNumber;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrganizationVATNumber()
+    {
+      return $this->OrganizationVATNumber;
+    }
+
+    /**
+     * @param string $OrganizationVATNumber
+     * @return \Ongoing\GoodsOwnerInfo
+     */
+    public function setOrganizationVATNumber($OrganizationVATNumber)
+    {
+      $this->OrganizationVATNumber = $OrganizationVATNumber;
       return $this;
     }
 

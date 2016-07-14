@@ -181,6 +181,16 @@ class ArticleDefinition
     protected $MaxStockDays = null;
 
     /**
+     * @var string $BarCodePackage
+     */
+    protected $BarCodePackage = null;
+
+    /**
+     * @var string $LinkToPicture
+     */
+    protected $LinkToPicture = null;
+
+    /**
      * @param ArticleOperation $ArticleOperation
      * @param ArticleIdentificationType $ArticleIdentification
      */
@@ -817,6 +827,42 @@ class ArticleDefinition
     public function setMaxStockDays($MaxStockDays)
     {
       $this->MaxStockDays = $MaxStockDays;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBarCodePackage()
+    {
+      return $this->BarCodePackage;
+    }
+
+    /**
+     * @param string $BarCodePackage
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setBarCodePackage($BarCodePackage)
+    {
+      $this->BarCodePackage = $BarCodePackage;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLinkToPicture()
+    {
+      return $this->LinkToPicture;
+    }
+
+    /**
+     * @param string $LinkToPicture
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setLinkToPicture($LinkToPicture)
+    {
+      $this->LinkToPicture = $LinkToPicture;
       return $this;
     }
 

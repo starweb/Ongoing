@@ -55,6 +55,11 @@ class InOrderLineArticleItem
      */
     protected $ExpiryDate = null;
 
+    /**
+     * @var float $NumberOfItems
+     */
+    protected $NumberOfItems = null;
+
     
     public function __construct()
     {
@@ -250,6 +255,24 @@ class InOrderLineArticleItem
       } else {
         $this->ExpiryDate = $ExpiryDate->format(\DateTime::ATOM);
       }
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getNumberOfItems()
+    {
+      return $this->NumberOfItems;
+    }
+
+    /**
+     * @param float $NumberOfItems
+     * @return \Ongoing\InOrderLineArticleItem
+     */
+    public function setNumberOfItems($NumberOfItems)
+    {
+      $this->NumberOfItems = $NumberOfItems;
       return $this;
     }
 

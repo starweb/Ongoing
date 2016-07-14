@@ -161,6 +161,16 @@ class ArticleClass
     protected $DangerousGoods = null;
 
     /**
+     * @var string $PurchaseCurrencyCode
+     */
+    protected $PurchaseCurrencyCode = null;
+
+    /**
+     * @var string $PurchaseCurrencyName
+     */
+    protected $PurchaseCurrencyName = null;
+
+    /**
      * @param boolean $IsStockArticle
      */
     public function __construct($IsStockArticle)
@@ -723,6 +733,42 @@ class ArticleClass
     public function setDangerousGoods(array $DangerousGoods = null)
     {
       $this->DangerousGoods = $DangerousGoods;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPurchaseCurrencyCode()
+    {
+      return $this->PurchaseCurrencyCode;
+    }
+
+    /**
+     * @param string $PurchaseCurrencyCode
+     * @return \Ongoing\ArticleClass
+     */
+    public function setPurchaseCurrencyCode($PurchaseCurrencyCode)
+    {
+      $this->PurchaseCurrencyCode = $PurchaseCurrencyCode;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPurchaseCurrencyName()
+    {
+      return $this->PurchaseCurrencyName;
+    }
+
+    /**
+     * @param string $PurchaseCurrencyName
+     * @return \Ongoing\ArticleClass
+     */
+    public function setPurchaseCurrencyName($PurchaseCurrencyName)
+    {
+      $this->PurchaseCurrencyName = $PurchaseCurrencyName;
       return $this;
     }
 

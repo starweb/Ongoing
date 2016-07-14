@@ -95,6 +95,11 @@ class OrderFilters
      */
     protected $PickOrderIdTo = null;
 
+    /**
+     * @var OrderSpecialFilters $OrderSpecialFilters
+     */
+    protected $OrderSpecialFilters = null;
+
     
     public function __construct()
     {
@@ -542,6 +547,24 @@ class OrderFilters
     public function setPickOrderIdTo($PickOrderIdTo)
     {
       $this->PickOrderIdTo = $PickOrderIdTo;
+      return $this;
+    }
+
+    /**
+     * @return OrderSpecialFilters
+     */
+    public function getOrderSpecialFilters()
+    {
+      return $this->OrderSpecialFilters;
+    }
+
+    /**
+     * @param OrderSpecialFilters $OrderSpecialFilters
+     * @return \Ongoing\OrderFilters
+     */
+    public function setOrderSpecialFilters($OrderSpecialFilters)
+    {
+      $this->OrderSpecialFilters = $OrderSpecialFilters;
       return $this;
     }
 
