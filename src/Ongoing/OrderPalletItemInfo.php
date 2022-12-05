@@ -8,7 +8,7 @@ class OrderPalletItemInfo
     /**
      * @var TrackingClass $Tracking
      */
-    public $Tracking = null;
+    public $trackingUrl = null;
 
     /**
      * @var int $Id
@@ -70,16 +70,17 @@ class OrderPalletItemInfo
      */
     public function getTracking()
     {
-        return $this->Tracking;
+        return $this->trackingUrl;
     }
 
     /**
-     * @param TrackingClass $Tracking
+     * @param TrackingClass $tracking
      * @return \Ongoing\PickedOrderLine
      */
-    public function setTracking($Tracking)
+    public function setTracking($tracking)
     {
-        $this->Tracking = $Tracking;
+        $this->trackingUrl = $tracking;
+
         return $this;
     }
 

@@ -6,9 +6,9 @@ class TrackingClass
 {
 
     /**
-     * @var string $TrackingUrl
+     * @var string $trackingUrl
      */
-    public $TrackingUrl = null;
+    public $trackingUrl = null;
 
 
     /**
@@ -16,16 +16,16 @@ class TrackingClass
      */
     public function getTrackingUrl()
     {
-        return $this->TrackingUrl;
+        return $this->trackingUrl;
     }
 
     /**
      * @param string $TrackingUrl
      * @return \Ongoing\TrackingClass
      */
-    public function setSystemId($TrackingUrl)
+    public function setSystemId($trackingUrl)
     {
-        $this->TrackingUrl = $TrackingUrl;
+        $this->trackingUrl = $trackingUrl;
         return $this;
     }
 
