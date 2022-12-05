@@ -6,6 +6,11 @@ class OrderPalletItemInfo
 {
 
     /**
+     * @var TrackingClass $Tracking
+     */
+    public $trackingUrl = null;
+
+    /**
      * @var int $Id
      */
     protected $Id = null;
@@ -56,8 +61,27 @@ class OrderPalletItemInfo
      */
     public function __construct($Id, $NumberOfItems)
     {
-      $this->Id = $Id;
-      $this->NumberOfItems = $NumberOfItems;
+        $this->Id = $Id;
+        $this->NumberOfItems = $NumberOfItems;
+    }
+
+    /**
+     * @return \Ongoing\TrackingClass
+     */
+    public function getTracking()
+    {
+        return $this->trackingUrl;
+    }
+
+    /**
+     * @param TrackingClass $tracking
+     * @return \Ongoing\PickedOrderLine
+     */
+    public function setTracking($tracking)
+    {
+        $this->trackingUrl = $tracking;
+
+        return $this;
     }
 
     /**
@@ -65,7 +89,7 @@ class OrderPalletItemInfo
      */
     public function getId()
     {
-      return $this->Id;
+        return $this->Id;
     }
 
     /**
@@ -74,8 +98,8 @@ class OrderPalletItemInfo
      */
     public function setId($Id)
     {
-      $this->Id = $Id;
-      return $this;
+        $this->Id = $Id;
+        return $this;
     }
 
     /**
@@ -83,7 +107,7 @@ class OrderPalletItemInfo
      */
     public function getTypeId()
     {
-      return $this->TypeId;
+        return $this->TypeId;
     }
 
     /**
@@ -92,8 +116,8 @@ class OrderPalletItemInfo
      */
     public function setTypeId($TypeId)
     {
-      $this->TypeId = $TypeId;
-      return $this;
+        $this->TypeId = $TypeId;
+        return $this;
     }
 
     /**
@@ -101,7 +125,7 @@ class OrderPalletItemInfo
      */
     public function getLabelId()
     {
-      return $this->LabelId;
+        return $this->LabelId;
     }
 
     /**
@@ -110,8 +134,8 @@ class OrderPalletItemInfo
      */
     public function setLabelId($LabelId)
     {
-      $this->LabelId = $LabelId;
-      return $this;
+        $this->LabelId = $LabelId;
+        return $this;
     }
 
     /**
@@ -119,7 +143,7 @@ class OrderPalletItemInfo
      */
     public function getSerial()
     {
-      return $this->Serial;
+        return $this->Serial;
     }
 
     /**
@@ -128,8 +152,8 @@ class OrderPalletItemInfo
      */
     public function setSerial($Serial)
     {
-      $this->Serial = $Serial;
-      return $this;
+        $this->Serial = $Serial;
+        return $this;
     }
 
     /**
@@ -137,7 +161,7 @@ class OrderPalletItemInfo
      */
     public function getPalletTypeCode()
     {
-      return $this->PalletTypeCode;
+        return $this->PalletTypeCode;
     }
 
     /**
@@ -146,8 +170,8 @@ class OrderPalletItemInfo
      */
     public function setPalletTypeCode($PalletTypeCode)
     {
-      $this->PalletTypeCode = $PalletTypeCode;
-      return $this;
+        $this->PalletTypeCode = $PalletTypeCode;
+        return $this;
     }
 
     /**
@@ -155,7 +179,7 @@ class OrderPalletItemInfo
      */
     public function getNumberOfItems()
     {
-      return $this->NumberOfItems;
+        return $this->NumberOfItems;
     }
 
     /**
@@ -164,8 +188,8 @@ class OrderPalletItemInfo
      */
     public function setNumberOfItems($NumberOfItems)
     {
-      $this->NumberOfItems = $NumberOfItems;
-      return $this;
+        $this->NumberOfItems = $NumberOfItems;
+        return $this;
     }
 
     /**
@@ -173,7 +197,7 @@ class OrderPalletItemInfo
      */
     public function getGoodsCategoryTypeName()
     {
-      return $this->GoodsCategoryTypeName;
+        return $this->GoodsCategoryTypeName;
     }
 
     /**
@@ -182,8 +206,8 @@ class OrderPalletItemInfo
      */
     public function setGoodsCategoryTypeName($GoodsCategoryTypeName)
     {
-      $this->GoodsCategoryTypeName = $GoodsCategoryTypeName;
-      return $this;
+        $this->GoodsCategoryTypeName = $GoodsCategoryTypeName;
+        return $this;
     }
 
     /**
@@ -191,7 +215,7 @@ class OrderPalletItemInfo
      */
     public function getWeight()
     {
-      return $this->Weight;
+        return $this->Weight;
     }
 
     /**
@@ -200,8 +224,8 @@ class OrderPalletItemInfo
      */
     public function setWeight($Weight)
     {
-      $this->Weight = $Weight;
-      return $this;
+        $this->Weight = $Weight;
+        return $this;
     }
 
     /**
@@ -209,7 +233,7 @@ class OrderPalletItemInfo
      */
     public function getVolume()
     {
-      return $this->Volume;
+        return $this->Volume;
     }
 
     /**
@@ -218,8 +242,8 @@ class OrderPalletItemInfo
      */
     public function setVolume($Volume)
     {
-      $this->Volume = $Volume;
-      return $this;
+        $this->Volume = $Volume;
+        return $this;
     }
 
 }
