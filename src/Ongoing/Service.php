@@ -342,6 +342,8 @@ class Service extends \SoapClient
       'WarehouseTransferOrderLineArticleInfo' => 'Ongoing\\WarehouseTransferOrderLineArticleInfo',
       'ArrayOfTransferArticleItemInfo' => 'Ongoing\\ArrayOfTransferArticleItemInfo',
       'TransferArticleItemInfo' => 'Ongoing\\TransferArticleItemInfo',
+      'ArrayOfOrderTrackingInfo' => 'Ongoing\\ArrayOfOrderTrackingInfo',
+      'OrderTrackingInfo' => 'Ongoing\\OrderTrackingInfo',
     );
 
     /**

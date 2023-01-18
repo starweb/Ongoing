@@ -91,6 +91,11 @@ class Order
     protected $ExternalSystemId = null;
 
     /**
+     * @var ArrayOfOrderTrackingInfo $Tracking
+     */
+    protected $Tracking = null;
+
+    /**
      * @param boolean $Success
      * @param int $ExternalSystemId
      */
@@ -406,4 +411,21 @@ class Order
       return $this;
     }
 
+    /**
+     * @return ArrayOfOrderTrackingInfo
+     */
+    public function getTracking()
+    {
+        return $this->Tracking;
+    }
+
+    /**
+     * @param ArrayOfOrderTrackingInfo $Tracking
+     * @return \Ongoing\Order
+     */
+    public function setTracking($Tracking)
+    {
+        $this->Tracking = $Tracking;
+        return $this;
+    }
 }
